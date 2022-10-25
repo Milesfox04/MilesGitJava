@@ -45,8 +45,8 @@
         out.println("En la cadena 3, hay " + Contador3 + " valor(es) par(es)");
     } else if (Contador4 > Contador1 && Contador4 > Contador2 && Contador4 > Contador3) {
         out.println("En la cadena 4, hay " + Contador4 + " valor(es) par(es)");
-    } else {
-        out.println("La cantidad de valor(es) par(e)s es igual en las cadenas ingresadas, por lo tanto no hay una mayor");
+    } else if (Contador1 == Contador2 && Contador1 == Contador3 && Contador1 == Contador4) {
+        out.println("La cantidad de valor(es) par(es) es igual en las cadenas ingresadas, por lo tanto no hay una mayor");
         out.println("<br>");
         out.println("En la cadena 1, hay " + Contador1 + " valor(es) par(es)");
         out.println("<br>");
@@ -55,9 +55,70 @@
         out.println("En la cadena 3, hay " + Contador3 + " valor(es) par(es)");
         out.println("<br>");
         out.println("En la cadena 4, hay " + Contador4 + " valor(es) par(es)");
-
+    }else if (Contador1 == Contador2 && Contador1 == Contador4 && Contador1 > Contador3) {
+        out.println("La cantidad de valor(es) par(es) es igual en las cadenas 1, 2 y 4, por lo tanto no hay una mayor");
+        out.println("<br>");
+        out.println("En la cadena 1, hay " + Contador1 + " valor(es) par(es)");
+        out.println("<br>");
+        out.println("En la cadena 2, hay " + Contador2 + " valor(es) par(es)");
+        out.println("<br>");
+        out.println("En la cadena 4, hay " + Contador4 + " valor(es) par(es)");
+    }else if (Contador1 == Contador3 && Contador1 == Contador4 && Contador1 > Contador2) {
+        out.println("La cantidad de valor(es) par(es) es igual en las cadenas 1, 3 y 4, por lo tanto no hay una mayor");
+        out.println("<br>");
+        out.println("En la cadena 1, hay " + Contador1 + " valor(es) par(es)");
+        out.println("<br>");
+        out.println("En la cadena 3, hay " + Contador3 + " valor(es) par(es)");
+        out.println("<br>");
+        out.println("En la cadena 4, hay " + Contador4 + " valor(es) par(es)");
+    }else if (Contador2 == Contador3 && Contador2 == Contador4 && Contador2 > Contador1) {
+        out.println("La cantidad de valor(es) par(es) es igual en las cadenas 2, 3 y 4, por lo tanto no hay una mayor");
+        out.println("<br>");
+        out.println("En la cadena 2, hay " + Contador2 + " valor(es) par(es)");
+        out.println("<br>");
+        out.println("En la cadena 3, hay " + Contador3 + " valor(es) par(es)");
+        out.println("<br>");
+        out.println("En la cadena 4, hay " + Contador4 + " valor(es) par(es)");
+    }else if (Contador1 == Contador2 && Contador1 > Contador3 && Contador1 > Contador4) {
+        out.println("La cantidad de valor(es) par(es) es igual en las cadenas 1 y 2, por lo tanto no hay una mayor");
+        out.println("<br>");
+        out.println("En la cadena 1, hay " + Contador1 + " valor(es) par(es)");
+        out.println("<br>");
+        out.println("En la cadena 2, hay " + Contador2 + " valor(es) par(es)");
+    }else if (Contador1 == Contador3 && Contador1 > Contador2 && Contador1 > Contador4) {
+        out.println("La cantidad de valor(es) par(es) es igual en las cadenas 1 y 3, por lo tanto no hay una mayor");
+        out.println("<br>");
+        out.println("En la cadena 1, hay " + Contador1 + " valor(es) par(es)");
+        out.println("<br>");
+        out.println("En la cadena 3, hay " + Contador3 + " valor(es) par(es)");
+    }else if (Contador1 == Contador4 && Contador1 > Contador2 && Contador1 > Contador3) {
+        out.println("La cantidad de valor(es) par(es) es igual en las cadenas 1 y 4, por lo tanto no hay una mayor");
+        out.println("<br>");
+        out.println("En la cadena 1, hay " + Contador1 + " valor(es) par(es)");
+        out.println("<br>");
+        out.println("En la cadena 4, hay " + Contador4 + " valor(es) par(es)");
+    }else if (Contador2 == Contador3 && Contador2 > Contador1 && Contador2 > Contador4) {
+        out.println("La cantidad de valor(es) par(es) es igual en las cadenas 2 y 3, por lo tanto no hay una mayor");
+        out.println("<br>");
+        out.println("En la cadena 2, hay " + Contador2 + " valor(es) par(es)");
+        out.println("<br>");
+        out.println("En la cadena 3, hay " + Contador3 + " valor(es) par(es)");
+    }else if (Contador2 == Contador4 && Contador2 > Contador1 && Contador2 > Contador3) {
+        out.println("La cantidad de valor(es) par(es) es igual en las cadenas 2 y 4, por lo tanto no hay una mayor");
+        out.println("<br>");
+        out.println("En la cadena 2, hay " + Contador2 + " valor(es) par(es)");
+        out.println("<br>");
+        out.println("En la cadena 4, hay " + Contador4 + " valor(es) par(es)");
+    }else if (Contador3 == Contador4 && Contador3 > Contador1 && Contador3 > Contador2) {
+        out.println("La cantidad de valor(es) par(es) es igual en las cadenas 3 y 4, por lo tanto no hay una mayor");
+        out.println("<br>");
+        out.println("En la cadena 3, hay " + Contador3 + " valor(es) par(es)");
+        out.println("<br>");
+        out.println("En la cadena 4, hay " + Contador4 + " valor(es) par(es)");
     }
+
 %>
 
 </body>
+
 </html>

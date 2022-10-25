@@ -14,7 +14,7 @@
 
 
     //funcion que cuenta los numeros pares en la cadena1
-    String cadena1 = Integer.toString(num1," ");
+    String cadena1 = Integer.toString(num1);
     int contador1 = 0;
     for (int i = 0; i < cadena1.length(); i++) {
         if (cadena1.charAt(i) == '2' || cadena1.charAt(i) == '4' || cadena1.charAt(i) == '6' || cadena1.charAt(i) == '8') {

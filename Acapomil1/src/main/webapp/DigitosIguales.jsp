@@ -29,7 +29,57 @@
     cadenaA = cadenaA.replaceAll("\\s","");
     cadenaB = cadenaB.replaceAll("\\s","");
     cadenaC = cadenaC.replaceAll("\\s","");
-    //cuenta caracteres repetidos en la cadenaA
+    //transformar cadena a array
+    char[] A1 = cadenaA.toCharArray();
+    char[] B1 = cadenaB.toCharArray();
+    char[] C1 = cadenaC.toCharArray();
+    //cuenta los valores repetidos en A1
+    int contadorA = 0;
+    for (int i = 0; i < A1.length; i++) {
+        for (int j = 0; j < A1.length; j++) {
+            if (A1[i] == A1[j]) {
+                contadorA++;
+            }
+        }
+    }
+    //cuenta los valores repetidos en B1
+    int contadorB = 0;
+    for (int i = 0; i < B1.length; i++) {
+        for (int j = 0; j < B1.length; j++) {
+            if (B1[i] == B1[j]) {
+                contadorB++;
+            }
+        }
+    }
+    //cuenta los valores repetidos en C1
+    int contadorC = 0;
+    for (int i = 0; i < C1.length; i++) {
+        for (int j = 0; j < C1.length; j++) {
+            if (C1[i] == C1[j]) {
+                contadorC++;
+            }
+        }
+    }
+    //compara los valores de los contadores
+    if (contadorA > contadorB && contadorA > contadorC) {
+        out.println("El numero con mas digitos repetidos es el 1º");
+    } else if (contadorB > contadorA && contadorB > contadorC) {
+        out.println("El numero con mas digitos repetidos es el 2º");
+    } else if (contadorC > contadorA && contadorC > contadorB) {
+        out.println("El numero con mas digitos repetidos es el 3º");
+    } else if (contadorA == contadorB && contadorA == contadorC){
+        out.println("Los tres numeros tienen la misma cantidad de digitos repetidos");
+    } else if (contadorA == contadorB && contadorA > contadorC){
+        out.println("El numero con mas digitos repetidos es el 1º y el 2º");
+    } else if (contadorA == contadorC && contadorA > contadorB){
+        out.println("El numero con mas digitos repetidos es el 1º y el 3º");
+    } else if (contadorB == contadorC && contadorB > contadorA){
+        out.println("El numero con mas digitos repetidos es el 2º y el 3º");
+    } else {
+        out.println("Los numeros ingresados no tienen digitos repetidos");
+    }
+
+
 
 %>
 
