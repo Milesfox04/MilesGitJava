@@ -2,6 +2,7 @@
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="java.util.Collections" %>
 <%@ page import="java.lang.reflect.Array" %>
+<%@ page import="java.util.function.Function" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -22,64 +23,47 @@
     out.println("Cadena3: " + cadenaC);
     out.println("<br>");
     //filtra las cadenas
-    cadenaA = cadenaA.replaceAll("[^0-9]", "");
-    cadenaB = cadenaB.replaceAll("[^0-9]", "");
-    cadenaC = cadenaC.replaceAll("[^0-9]", "");
+    String FiltroCadenaA = cadenaA.replaceAll("[^0-9]", "");
+    String FiltroCadenaB = cadenaB.replaceAll("[^0-9]", "");
+    String FiltroCadenaC = cadenaC.replaceAll("[^0-9]", "");
     //orden los resultados, dando formato
-    cadenaA = cadenaA.replaceAll("\\s","");
-    cadenaB = cadenaB.replaceAll("\\s","");
-    cadenaC = cadenaC.replaceAll("\\s","");
+    String F_O_CadenaA = FiltroCadenaA.replaceAll("\\s","");
+    String F_O_CadenaB = FiltroCadenaB.replaceAll("\\s","");
+    String F_O_CadenaC = FiltroCadenaC.replaceAll("\\s","");
     //transformar cadena a array
-    char[] A1 = cadenaA.toCharArray();
-    char[] B1 = cadenaB.toCharArray();
-    char[] C1 = cadenaC.toCharArray();
-    //cuenta los valores repetidos en A1
-    int contadorA = 0;
-    for (int i = 0; i < A1.length; i++) {
-        for (int j = 0; j < A1.length; j++) {
-            if (A1[i] == A1[j]) {
-                contadorA++;
+    char[] A1 = F_O_CadenaA.toCharArray();
+    char[] B1 = F_O_CadenaB.toCharArray();
+    char[] C1 = F_O_CadenaC.toCharArray();
+    //funcion que cuenta char repetidos
+    Function<char[], Integer> contarRepetidos = (char[] array) -> {
+        int contador = 0;
+        for (int i = 0; i < array.length; i++) {
+            for (int j = i + 1; j < array.length; j++) {
+                if (array[i] == array[j]) {
+                    contador++;
+                    break;
+                }
             }
         }
-    }
-    //cuenta los valores repetidos en B1
-    int contadorB = 0;
-    for (int i = 0; i < B1.length; i++) {
-        for (int j = 0; j < B1.length; j++) {
-            if (B1[i] == B1[j]) {
-                contadorB++;
-            }
-        }
-    }
-    //cuenta los valores repetidos en C1
-    int contadorC = 0;
-    for (int i = 0; i < C1.length; i++) {
-        for (int j = 0; j < C1.length; j++) {
-            if (C1[i] == C1[j]) {
-                contadorC++;
-            }
-        }
-    }
-    //compara los valores de los contadores
-    if (contadorA > contadorB && contadorA > contadorC) {
-        out.println("El numero con mas digitos repetidos es el 1º");
-    } else if (contadorB > contadorA && contadorB > contadorC) {
-        out.println("El numero con mas digitos repetidos es el 2º");
-    } else if (contadorC > contadorA && contadorC > contadorB) {
-        out.println("El numero con mas digitos repetidos es el 3º");
-    } else if (contadorA == contadorB && contadorA == contadorC){
-        out.println("Los tres numeros tienen la misma cantidad de digitos repetidos");
-    } else if (contadorA == contadorB && contadorA > contadorC){
+        return contador;
+    };
+    if (contarRepetidos.apply(A1) > contarRepetidos.apply(B1) && contarRepetidos.apply(A1) > contarRepetidos.apply(C1)) {
+        out.println("El numero con mas digitos repetidos es el 1º: " + cadenaA);
+    } else if (contarRepetidos.apply(B1) > contarRepetidos.apply(A1) && contarRepetidos.apply(B1) > contarRepetidos.apply(C1)) {
+        out.println("El numero con mas digitos repetidos es el 2º: " + cadenaB);
+    } else if (contarRepetidos.apply(C1) > contarRepetidos.apply(A1) && contarRepetidos.apply(C1) > contarRepetidos.apply(B1)) {
+        out.println("El numero con mas digitos repetidos es el 3º: " + cadenaC);
+    } else if (contarRepetidos.apply(A1) == contarRepetidos.apply(B1) && contarRepetidos.apply(A1) > contarRepetidos.apply(C1)) {
         out.println("El numero con mas digitos repetidos es el 1º y el 2º");
-    } else if (contadorA == contadorC && contadorA > contadorB){
+} else if (contarRepetidos.apply(A1) == contarRepetidos.apply(C1) && contarRepetidos.apply(A1) > contarRepetidos.apply(B1)) {
         out.println("El numero con mas digitos repetidos es el 1º y el 3º");
-    } else if (contadorB == contadorC && contadorB > contadorA){
+} else if (contarRepetidos.apply(B1) == contarRepetidos.apply(C1) && contarRepetidos.apply(B1) > contarRepetidos.apply(A1)) {
         out.println("El numero con mas digitos repetidos es el 2º y el 3º");
-    } else {
+} else if (contarRepetidos.apply(A1) == contarRepetidos.apply(B1) && contarRepetidos.apply(A1) == contarRepetidos.apply(C1)) {
+        out.println("Los tres numeros tienen la misma cantidad de digitos repetidos");
+    }else{
         out.println("Los numeros ingresados no tienen digitos repetidos");
     }
-
-
 
 %>
 
