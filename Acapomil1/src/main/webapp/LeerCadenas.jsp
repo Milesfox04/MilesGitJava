@@ -4,8 +4,8 @@
 <head>
     <title>FILTRADO DE CADENAS</title>
 </head>
-<body>
-<h1>2. Resultado de leer 5 cadenas de cracteres, y eliminar todas las vocales de cada una de ellas.</h1>
+<body style = "background-color:lightgoldenrodyellow;">
+<h1 style = "color:blue;font-family:'Arial',sans-serif;">2. Resultado de leer 5 cadenas de cracteres, y eliminar todas las vocales de cada una de ellas.</h1>
 <%
         //Captura variables
         String Cadena1 = request.getParameter("Cadena1");
@@ -37,5 +37,8 @@
         out.println("Cadena 5: " + Cadena5);
         out.println("<br>");
 %>
+<br/>
+<br/>
+<a href = "index.html">Ir a la página principal</a>
         </body>
 </html>

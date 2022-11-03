@@ -1,16 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EJERCICIOS EN CLASES</title>
+    <style>
+        .img-container {
+            text-align: center;
+            display: block;
+        }
+        .img-container2 {
+            text-align: center;
+            display: block;
+        }
+    </style>
 </head>
-<body>
-    <h1>EJERCICIOS EN CLASES</h1>
-    <h2>1. Mostrar una matriz de 11X11 la multiplicacion de los numeros del 1 al 10.</h2>
+<body style = "background-color:lightgoldenrodyellow;">
+    <h1 style = "color:black;font-size: 50px;font-family:'Arial',sans-serif;text-align: center">EJERCICIOS EN CLASES</h1>
+    <pre title = "Datos Alumno" style = "color:black;font-family:'Arial',sans-serif;">
+        Nombre: TTE. JACOB BARQUI PÉREZ
+        curso:  II CRIM / COMUNICACIONES E INFORMÁTICA
+        Fecha:  02/11/2022
+    </pre>
+    <p title = "Tecnologías" style = "color:darkred;font-family: 'Arial',sans-serif;text-align: center">Tecologías Asociadas: </p>
+    <span class = "img-container" >
+    <img src = 'http://globalmentoring.com.mx/imagenes/html5.png'alt = "Logo HTML" width = "100px" height = "100px" title = "Logo HTML" />
+    <img src = 'http://globalmentoring.com.mx/imagenes/css3.png'alt = "Logo CSS3" width = "100px" height = "100px" title = "Logo CSS3" />
+    <img src = 'https://cdn2.iconfinder.com/data/icons/web-files-essential-glyph/48/Sed-24-512.png'alt = "Logo JSP" width = "100px" height = "100px" title = "Logo JSP" />
+    </span>
+    <h2 style = "color:blue;font-family:'Arial',sans-serif;">1. Mostrar una matriz de 11X11 la multiplicacion de los numeros del 1 al 10.</h2>
     <form action="Matriz11.jsp" method="post">
         <input type="submit" value="Mostrar">
     </form>
-    <h2>2. Leer 5 cadenas de cracteres, eliminar todas las vocales de cada una de ellas.</h2>
+    <hr/>
+    <h2 style = "color:blue;font-family:'Arial',sans-serif;">2. Leer 5 cadenas de cracteres, eliminar todas las vocales de cada una de ellas.</h2>
     <form action="LeerCadenas.jsp" method="post">
         <label for="Cadena1">Cadena 1:</label>
         <input type="text" name="Cadena1" id="Cadena1">
@@ -29,7 +53,8 @@
         <br>
         <input type="submit" value="Filtrar">
     </form>
-    <h2>3. Ingresar 3 numeros reales, escribir el que tiene más digitos iguales.</h2>
+    <hr/>
+    <h2 style = "color:blue;font-family:'Arial',sans-serif;">3. Ingresar 3 numeros reales, escribir el que tiene más digitos iguales.</h2>
     <form action="DigitosIguales.jsp" method="post">
         <label for="Numero1">Numero 1:</label>
         <input step="any" type="number" name="Numero1" id="Numero1">
@@ -42,7 +67,8 @@
         <br>
         <input type="submit" value="Enviar">
     </form>
-    <h2>4. Ingresar 4 numeros enteros, escribir el(los) que tiene más digitos pares (no se considera el 0).</h2>
+    <hr/>
+    <h2 style = "color:blue;font-family:'Arial',sans-serif;">4. Ingresar 4 numeros enteros, escribir el(los) que tiene más digitos pares (no se considera el 0).</h2>
     <form action="DigitosPares.jsp" method="post">
         <label for="Numero11">Numero 1:</label>
         <input type="number" name="Numero11" id="Numero11">
@@ -58,12 +84,18 @@
         <br>
         <input type="submit" value="Calcular">
     </form>
-    <h2>5. Ingresar letras (10) encriptar, segun posicion +5,ciclico.</h2>
+    <hr/>
+    <h2 style = "color:blue;font-family:'Arial',sans-serif;">5. Ingresar letras (10) encriptar, segun posicion +5,ciclico.</h2>
     <form action="EncriptarLetras.jsp" method="post">
         <label for="Cadena11">Cadena 1:</label>
         <input type="text" name="Cadena11" id="Cadena11" required  minlength="10" maxlength="10">
         <br>
         <input type="submit" value="Encriptar">
     </form>
+    <hr/>
+    <h4 style = "color:black;font-family:'Arial',sans-serif;text-align: center" >Aún Trabajando!!</h4>
+    <span class = "img-container2">
+    <img src = 'https://img.wattpad.com/61dafcd9fcc8831e64f1d8bb0462a27fd3c36fba/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f6f324254683972506f6d326367413d3d2d3932383734353138392e313632373435313539386132666263323539333539343235323436312e6a7067' alt = "Logo HTML" width = "400px" height = "400px" title = "Arreglando Esto" />
+   </span>
 </body>
 </html>

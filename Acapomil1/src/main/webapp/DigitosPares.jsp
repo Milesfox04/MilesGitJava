@@ -4,8 +4,8 @@
 <head>
     <title>CALCULO DE CANTIDAD DE DIGITOS PARES EN NUMEROS</title>
 </head>
-<body>
-<h1>4. Resultado de 4 numeros enteros, el que tiene más digitos pares .</h1>
+<body style = "background-color:lightgoldenrodyellow;">
+<h1 style = "color:blue;font-family:'Arial',sans-serif;">4. Resultado de 4 numeros enteros, el que tiene más digitos pares .</h1>
 <%
     //captura valores del index
     String Cadena1 = request.getParameter("Numero11");
@@ -118,7 +118,9 @@
     }
 
 %>
-
+<br/>
+<br/>
+<a href = "index.html">Ir a la página principal</a>
 </body>
 
 </html>

@@ -4,8 +4,8 @@
 <head>
     <title>ENCRIPTAR CODIGOS</title>
 </head>
-<body>
-<h1>5. Encripta la cadena, cada letra segun posicion +5.</h1>
+<body style = "background-color:lightgoldenrodyellow;">
+<h1 style = "color:blue;font-family:'Arial',sans-serif;">5. Encripta la cadena, cada letra segun posicion +5.</h1>
 <%
     //captura variables, en este caso solo se define no se usa
     String Cadena= request.getParameter("Cadena11");
@@ -53,6 +53,8 @@
     out.println("Cadena encriptada: " + encriptar.apply(Cadena));
     %>
     <h2>La cadena encriptada es: <%=encriptar.apply(Cadena)%></h2>
-
+<br/>
+<br/>
+<a href = "index.html">Ir a la página principal</a>
 </body>
 </html>

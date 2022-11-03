@@ -8,8 +8,8 @@
 <head>
     <title>CALCULO DE DIGITOS REPETIDOS</title>
 </head>
-<body>
-<h1>3. Calculo al Ingresar 3 numeros reales, escribir el que tiene más digitos iguales.</h1>
+<body style = "background-color:lightgoldenrodyellow;">
+<h1 style = "color:blue;font-family:'Arial',sans-serif;">3. Calculo al Ingresar 3 numeros reales, escribir el que tiene más digitos iguales.</h1>
 <%
     //captura variables como string
     String cadenaA = request.getParameter("Numero1");
@@ -66,6 +66,8 @@
     }
 
 %>
-
+<br/>
+<br/>
+<a href = "index.html">Ir a la página principal</a>
 </body>
 </html>

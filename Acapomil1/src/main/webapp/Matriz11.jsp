@@ -3,10 +3,8 @@
 <head>
     <title>CALCULO MATRIZ 11X11</title>
 </head>
-
-<body>
-<h1>1. Resultados de la multiplicacion de los numeros del 1 al 10 en una matriz.</h1>
-<br>
+<body style = "background-color:lightgoldenrodyellow;">
+<h1 style = "color:blue;font-family:'Arial',sans-serif;">1. Resultados de la multiplicacion de los numeros del 1 al 10 en una matriz.</h1>
 <%
     //Define la matriz del 1 al 10
     int[][] matriz = new int[11][11];
@@ -27,5 +25,8 @@
         out.println("</tr>");
     }
 %>
+<br/>
+<br/>
+<a href = "index.html">Ir a la página principal</a>
 </body>
 </html>
