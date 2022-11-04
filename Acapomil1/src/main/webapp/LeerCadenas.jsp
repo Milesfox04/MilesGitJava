@@ -1,11 +1,31 @@
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
+<html lang="es">
 <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FILTRADO DE CADENAS</title>
+        <link rel="stylesheet" href="estilos.css"/>
+        <style>
+                h1{
+                        text-align: initial;
+                        font-size: 30px;
+                }
+                a:link, a:visited{
+                        background-color:#b5179e ;
+                        color: white;
+                        padding:15px 25px;
+                        text-align: center;
+                        text-decoration: none;
+                }
+                a:hover, a:active{
+                        background-color:#f72585;
+                }
+        </style>
 </head>
-<body style = "background-color:lightgoldenrodyellow;">
-<h1 style = "color:blue;font-family:'Arial',sans-serif;">2. Resultado de leer 5 cadenas de cracteres, y eliminar todas las vocales de cada una de ellas.</h1>
+<body>
+<h1>2. Resultado de leer 5 cadenas de cracteres, y eliminar todas las vocales de cada una de ellas.</h1>
 <%
         //Captura variables
         String Cadena1 = request.getParameter("Cadena1");
@@ -14,11 +34,11 @@
         String Cadena4 = request.getParameter("Cadena4");
         String Cadena5 = request.getParameter("Cadena5");
         //filtro vocales de las variables
-        Cadena1 = Cadena1.replaceAll("[aeiouAEIOUáéíóúÁÉÍÓÚ]", "");
-        Cadena2 = Cadena2.replaceAll("[aeiouAEIOUáéíóúÁÉÍÓÚ]", "");
-        Cadena3 = Cadena3.replaceAll("[aeiouAEIOUáéíóúÁÉÍÓÚ]", "");
-        Cadena4 = Cadena4.replaceAll("[aeiouAEIOUáéíóúÁÉÍÓÚ]", "");
-        Cadena5 = Cadena5.replaceAll("[aeiouAEIOUáéíóúÁÉÍÓÚ]", "");
+        Cadena1 = Cadena1.replaceAll("[aeiouAEIOUáéíóúÁÉÍÓÚäåüöð]", "");
+        Cadena2 = Cadena2.replaceAll("[aeiouAEIOUáéíóúÁÉÍÓÚäåüöð]", "");
+        Cadena3 = Cadena3.replaceAll("[aeiouAEIOUáéíóúÁÉÍÓÚäåüöð]", "");
+        Cadena4 = Cadena4.replaceAll("[aeiouAEIOUáéíóúÁÉÍÓÚäåüöð]", "");
+        Cadena5 = Cadena5.replaceAll("[aeiouAEIOUáéíóúÁÉÍÓÚäåüöð]", "");
         //orden los resultados, dando formato
         Cadena1 = Cadena1.replaceAll("\\s","");
         Cadena2 = Cadena2.replaceAll("\\s","");

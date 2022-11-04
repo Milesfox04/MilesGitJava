@@ -1,11 +1,31 @@
 <%@ page import="java.util.function.Function" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
+<html lang="es">
 <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ENCRIPTAR CODIGOS</title>
+    <link rel="stylesheet" href="estilos.css"/>
+    <style>
+        h1{
+            text-align: initial;
+            font-size: 30px;
+        }
+        a:link, a:visited{
+            background-color:#b5179e ;
+            color: white;
+            padding:15px 25px;
+            text-align: center;
+            text-decoration: none;
+        }
+        a:hover, a:active{
+            background-color:#f72585;
+        }
+    </style>
 </head>
-<body style = "background-color:lightgoldenrodyellow;">
-<h1 style = "color:blue;font-family:'Arial',sans-serif;">5. Encripta la cadena, cada letra segun posicion +5.</h1>
+<body>
+<h1>5. Encripta la cadena, cada letra segun posicion +5.</h1>
 <%
     //captura variables, en este caso solo se define no se usa
     String Cadena= request.getParameter("Cadena11");

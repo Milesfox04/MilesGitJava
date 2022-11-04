@@ -1,0 +1,26 @@
+body{
+    background-color: rgba(232, 222, 139, 0.8);
+}
+h1{
+    color:black;
+    font-size: 50px;
+    font-family:'Arial',sans-serif;
+    text-align: center
+}
+h2{
+    color: rgba(59, 59, 243, 0.9);
+    font-family:'Arial',sans-serif;
+}
+h4{
+    color:black;
+    font-family:'Arial',sans-serif;
+    text-align: center
+}
+p{
+    color:black;
+    font-family:'Arial', sans-serif;
+}
+.img-container {
+    text-align: center;
+    display: block;
+}

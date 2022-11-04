@@ -1,11 +1,34 @@
 <%@ page import="org.w3c.dom.xpath.XPathResult" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
+<html lang="es">
 <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CALCULO DE CANTIDAD DE DIGITOS PARES EN NUMEROS</title>
+    <link rel="stylesheet" href="estilos.css"/>
+    <style>
+        h1{
+            text-align: initial;
+            font-size: 30px;
+        }
+        a:link, a:visited{
+            background-color:#b5179e ;
+            color: white;
+            padding:15px 25px;
+            text-align: center;
+            text-decoration: none;
+        }
+        a:hover, a:active{
+            background-color:#f72585;
+        }
+    </style>
 </head>
-<body style = "background-color:lightgoldenrodyellow;">
-<h1 style = "color:blue;font-family:'Arial',sans-serif;">4. Resultado de 4 numeros enteros, el que tiene más digitos pares .</h1>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<body>
+<h1>4. Resultado de 4 numeros enteros, el que tiene más digitos pares .</h1>
 <%
     //captura valores del index
     String Cadena1 = request.getParameter("Numero11");
