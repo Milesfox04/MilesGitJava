@@ -54,32 +54,45 @@
     char[] A1 = F_O_CadenaA.toCharArray();
     char[] B1 = F_O_CadenaB.toCharArray();
     char[] C1 = F_O_CadenaC.toCharArray();
-    //funcion que cuenta char repetidos
-    Function<char[], Integer> contarRepetidos = (char[] array) -> {
-        int contador = 0;
-        for (int i = 0; i < array.length; i++) {
-            for (int j = i + 1; j < array.length; j++) {
-                if (array[i] == array[j]) {
-                    contador++;
-                    break;
-                }
+    //funcion que almacena solo una vez los digitos repetidos
+    Function<char[], List<Character>> funcionRepetidos = (char[] array) -> {
+        List<Character> repetidos = new ArrayList<>();
+        for (char c : array) {
+            if (!repetidos.contains(c)) {
+                repetidos.add(c);
             }
         }
-        return contador;
+        return repetidos;
     };
-    if (contarRepetidos.apply(A1) > contarRepetidos.apply(B1) && contarRepetidos.apply(A1) > contarRepetidos.apply(C1)) {
+    //aplicacion de funcion
+    List<Character> repetidosA = funcionRepetidos.apply(A1);
+    List<Character> repetidosB = funcionRepetidos.apply(B1);
+    List<Character> repetidosC = funcionRepetidos.apply(C1);
+    //verifica la longitud de las listas
+    int longitudA = repetidosA.size();
+    int longitudB = repetidosB.size();
+    int longitudC = repetidosC.size();
+    out.println("Digitos repetidos de la Cadena1: " + longitudA);
+    out.println("<br>");
+    out.println("Digitos repetidos de la Cadena2: " + longitudB);
+    out.println("<br>");
+    out.println("Digitos repetidos de la Cadena3: " + longitudC);
+    out.println("<br>");
+
+    //condicion para determinar el numero con mas digitos repetidos
+    if (longitudA> longitudB && longitudA > longitudC) {
         out.println("El numero con mas digitos repetidos es el 1º: " + cadenaA);
-    } else if (contarRepetidos.apply(B1) > contarRepetidos.apply(A1) && contarRepetidos.apply(B1) > contarRepetidos.apply(C1)) {
+    } else if (longitudB > longitudA && longitudB > longitudC) {
         out.println("El numero con mas digitos repetidos es el 2º: " + cadenaB);
-    } else if (contarRepetidos.apply(C1) > contarRepetidos.apply(A1) && contarRepetidos.apply(C1) > contarRepetidos.apply(B1)) {
+    } else if (longitudC > longitudA && longitudC > longitudB) {
         out.println("El numero con mas digitos repetidos es el 3º: " + cadenaC);
-    } else if (contarRepetidos.apply(A1) == contarRepetidos.apply(B1) && contarRepetidos.apply(A1) > contarRepetidos.apply(C1)) {
+    } else if (longitudA == longitudB && longitudA > longitudC) {
         out.println("El numero con mas digitos repetidos es el 1º y el 2º");
-} else if (contarRepetidos.apply(A1) == contarRepetidos.apply(C1) && contarRepetidos.apply(A1) > contarRepetidos.apply(B1)) {
+} else if (longitudA == longitudC && longitudA > longitudB) {
         out.println("El numero con mas digitos repetidos es el 1º y el 3º");
-} else if (contarRepetidos.apply(B1) == contarRepetidos.apply(C1) && contarRepetidos.apply(B1) > contarRepetidos.apply(A1)) {
+} else if (longitudB == longitudC && longitudB > longitudA) {
         out.println("El numero con mas digitos repetidos es el 2º y el 3º");
-} else if (contarRepetidos.apply(A1) == contarRepetidos.apply(B1) && contarRepetidos.apply(A1) == contarRepetidos.apply(C1)) {
+} else if (longitudA== longitudB && longitudA == longitudC){
         out.println("Los tres numeros tienen la misma cantidad de digitos repetidos");
     }else{
         out.println("Los numeros ingresados no tienen digitos repetidos");

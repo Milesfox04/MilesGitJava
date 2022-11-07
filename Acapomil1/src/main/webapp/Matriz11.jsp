@@ -27,8 +27,9 @@
     //imprimir matriz
     out.println("<br></table><br>");
     out.println("<table border=1>");
+    out.println("<th>*</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th>");
     for (i = 1; i < 11; i++) {
-        out.println("<tr>");
+        out.println("<tr><th>" + i + "</th>");
         for (j = 1; j < 11; j++) {
             out.print("<td>" + matriz[i][j] + "</td>");
         }

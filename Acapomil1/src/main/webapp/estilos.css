@@ -1,26 +1,52 @@
 body{
-    background-color: rgba(232, 222, 139, 0.8);
+    background-color: rgba(241, 229, 206, 0.8);
 }
 h1{
-    color:black;
+    color:#3f37c9;
     font-size: 50px;
     font-family:'Arial',sans-serif;
     text-align: center
 }
 h2{
-    color: rgba(59, 59, 243, 0.9);
+    color:#3f37c9;
     font-family:'Arial',sans-serif;
 }
 h4{
-    color:black;
+    color:#3f37c9;
     font-family:'Arial',sans-serif;
     text-align: center
 }
 p{
-    color:black;
+    color:#457b9d;
     font-family:'Arial', sans-serif;
 }
 .img-container {
     text-align: center;
     display: block;
+}
+*{
+    margin:0;
+    padding:0;
+}
+/*id unico*/
+#titulo_principal{
+    color:#f72585;
+    text-align: center;
+    margin: 15px;
+}
+.tarjeta{
+    border:10px solid #560bad;
+    background-color:#f1faee;
+    text-align: center;
+    margin:15px 100px;
+    padding: 15px;
+}
+.titulo-uno{
+    color:#f72585;
+
+}
+#titulo_principal{
+    color:#f72585;
+    text-align: center;
+    margin: 15px;
 }
