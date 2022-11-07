@@ -54,12 +54,18 @@
     char[] A1 = F_O_CadenaA.toCharArray();
     char[] B1 = F_O_CadenaB.toCharArray();
     char[] C1 = F_O_CadenaC.toCharArray();
-    //funcion que almacena solo una vez los digitos repetidos
+    //funcion que almacena solo una vez los digitos repetidos con frecuencia mayor a 1
     Function<char[], List<Character>> funcionRepetidos = (char[] array) -> {
         List<Character> repetidos = new ArrayList<>();
-        for (char c : array) {
-            if (!repetidos.contains(c)) {
-                repetidos.add(c);
+        for (int i = 0; i < array.length; i++) {
+            int contador = 0;
+            for (int j = 0; j < array.length; j++) {
+                if (array[i] == array[j]) {
+                    contador++;
+                }
+            }
+            if (contador > 1 && !repetidos.contains(array[i])) {
+                repetidos.add(array[i]);
             }
         }
         return repetidos;
@@ -68,15 +74,16 @@
     List<Character> repetidosA = funcionRepetidos.apply(A1);
     List<Character> repetidosB = funcionRepetidos.apply(B1);
     List<Character> repetidosC = funcionRepetidos.apply(C1);
-    //verifica la longitud de las listas
+
+    //verifica la longitud de las listas sin contar el char0
     int longitudA = repetidosA.size();
     int longitudB = repetidosB.size();
     int longitudC = repetidosC.size();
-    out.println("Digitos repetidos de la Cadena1: " + longitudA);
+    out.println("Digitos repetidos de la Cadena1: " + (longitudA));
     out.println("<br>");
-    out.println("Digitos repetidos de la Cadena2: " + longitudB);
+    out.println("Digitos repetidos de la Cadena2: " + (longitudB));
     out.println("<br>");
-    out.println("Digitos repetidos de la Cadena3: " + longitudC);
+    out.println("Digitos repetidos de la Cadena3: " + (longitudC));
     out.println("<br>");
 
     //condicion para determinar el numero con mas digitos repetidos
