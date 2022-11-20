@@ -61,13 +61,13 @@
     int Contador4 = Cadena4.length();
     //compara contadores y muestra el mayor
     if (Contador1 > Contador2 && Contador1 > Contador3 && Contador1 > Contador4) {
-        out.println("En la cadena 1: " + Cadena1 +", hay " + Contador1 + " valor(es) par(es)");
+        out.println("En la cadena 1: " + Cadena1 + ", hay " + Contador1 + " valor(es) par(es)");
     } else if (Contador2 > Contador1 && Contador2 > Contador3 && Contador2 > Contador4) {
         out.println("En la cadena 2: " +Cadena2 + "hay " + Contador2 + " valor(es) par(es)");
     } else if (Contador3 > Contador1 && Contador3 > Contador2 && Contador3 > Contador4) {
         out.println("En la cadena 3: " +Cadena3 + "hay " + Contador3 + " valor(es) par(es)");
     } else if (Contador4 > Contador1 && Contador4 > Contador2 && Contador4 > Contador3) {
-        out.println("En la cadena 4: " +Cadena4+ "hay " + Contador4 + " valor(es) par(es)");
+        out.println("En la cadena 4: " +Cadena4 + "hay " + Contador4 + " valor(es) par(es)");
     } else if (Contador1 == Contador2 && Contador1 == Contador3 && Contador1 == Contador4) {
         out.println("La cantidad de valor(es) par(es) es igual en las cadenas ingresadas, por lo tanto no hay una mayor");
         out.println("<br>");

@@ -69,9 +69,8 @@
         }
         return cadenaEncriptada;
     };
-    //muestra resultado
-    out.println("Cadena encriptada: " + encriptar.apply(Cadena));
     %>
+<br/>
     <h2>La cadena encriptada es: <%=encriptar.apply(Cadena)%></h2>
 <br/>
 <br/>

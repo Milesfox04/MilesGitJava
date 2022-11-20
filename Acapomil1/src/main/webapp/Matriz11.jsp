@@ -11,6 +11,16 @@
             text-align: initial;
             font-size: 30px;
         }
+        a:link, a:visited{
+            background-color:#b5179e ;
+            color: white;
+            padding:15px 25px;
+            text-align: center;
+            text-decoration: none;
+        }
+        a:hover, a:active{
+            background-color:#f72585;
+        }
     </style>
 </head>
 <body>
@@ -25,7 +35,7 @@
         }
     }
     //imprimir matriz
-    out.println("<br></table><br>");
+    out.println("<br><table><br/>");
     out.println("<table border=1>");
     out.println("<th>*</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th>");
     for (i = 1; i < 11; i++) {
@@ -35,6 +45,7 @@
         }
         out.println("</tr>");
     }
+    out.println("</table>");
 %>
 <br/>
 <br/>
